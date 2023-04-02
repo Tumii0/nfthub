@@ -1,0 +1,12 @@
+body{
+    background: url(images/hero-image.jpg);
+    background-repeat: no-repeat;
+}
+div{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: red;
+    background: linear-gradient(180deg, #F4F4F4 0%, rgba(210, 210, 210, 0) 100%);
+   
+}
