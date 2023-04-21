@@ -1,12 +1,148 @@
-body{
-    background: url(images/hero-image.jpg);
-    background-repeat: no-repeat;
+*, ::after, ::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-div{
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    background-color: red;
-    background: linear-gradient(180deg, #F4F4F4 0%, rgba(210, 210, 210, 0) 100%);
+body{
+    width: 100%;
+}
+:root{
+    --clr-white: #fff;
+    --clr-main: #1D1D1D;
+    --clr-primary: #333333;
+    --clr-secondary: #4E47C6;
+    --clr-offgrey: #c4c4c4;
+    --transition: all 0.3s linear;
+    
+    
+    }
+    h1,h2,h3,h4,h5{
+        color: var(--clr-white);
+        font-family: 'Syne', sans-serif;
+    }
+p{
+    font-family: 'Satoshi', sans-serif;
+}
+
+.navbar{
+display: flex;
+justify-content: space-between;
+padding: 1.25em 0.625em 1.25em 1.25em;
+background: var(--clr-main);
+color: #fff;
+font-family: 'Poppins', sans-serif;
+}
+.nav-logo{
+    display: flex;
+    align-items: center;
+}
+.nft{
+    font-weight: bold ;
+}
+.nft-hub{
+    margin-left: 5px;
+}
+.nav-link{
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+    padding: 1.25em 0.625em;
+}
+.nav-btn{
+    display: none;
+}
+
+.btn{
+    background: transparent;
+    padding: 0.625em 2.5em;
+    border: 2px solid #fff;
+    border-radius: 3px;
+    color: #fff;
+    width: 222px; 
+    font-weight: bold;
+}
+@media screen and (max-width: 768px){
+   .nav-link, .btn{
+    display: none;
+   }
+   .nav-btn{
+    display: block;
+}
+    
+ }
+
+/* hero section */
+
+ .hero-section{
+    background: #1D1D1D;
+    padding: 1.25em;
+
+}
+.hero-text{
+    font-size: 2.625rem;
+    margin-bottom: 1.875em;
+}
+.hero-text_span{
+    background: var(--clr-secondary);
+    padding-right: 15px;
    
 }
+.explore-nfts, .hero-btns-container{
+    display: none;
+}
+
+.hero-eclipse{
+width: 100%;
+max-width: 252px;
+height: 252px;
+margin: 0 auto;
+background: rgba(217, 217, 217, 0.01);
+box-shadow: inset 0px 0px 52.6633px rgba(78, 0, 152, 0.7);
+border-radius: 50%;
+filter: drop-shadow(0px 9.21608px 164.573px #4E47C6);
+background-image: url(images/hero-image2.png);
+background-size: contain;
+background-position: center;
+background-repeat: no-repeat;
+animation: blink 5.0s linear infinite;
+
+
+}
+
+@keyframes blink {
+    0% { box-shadow:  0 0 100px #47C64E; }
+    20% { box-shadow: 0 0 100px var(--clr-secondary); }
+    50% { box-shadow: none; }
+    100% { box-shadow:  0 0 100px	rgb(0, 106, 255); }
+}
+
+
+@media screen and (min-width: 768px){
+    .hero-eclipse{
+        max-width: 375px;
+        height: auto;
+    }
+    .hero-text{
+        max-width: 386px;
+    }
+   .hero-section{
+    display: flex;
+   }
+   .explore-nfts, .hero-btns-container{
+    display: block;
+}
+.hero-btns-container{
+    display: flex;
+}
+.hero-text{
+    margin-bottom: 0.425em;
+    }
+    .explore-nfts{
+        margin-bottom: 2.1875em;
+        font-size: 1.123rem;
+        width: 356px;
+        color: var(--clr-offgrey);
+    }
+}
+     
+  
